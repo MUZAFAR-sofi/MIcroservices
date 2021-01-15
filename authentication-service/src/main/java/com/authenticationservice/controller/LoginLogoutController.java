@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.authenticationservice.domain.ChangePassword;
 import com.authenticationservice.domain.User;
 import com.authenticationservice.service.UserService;
 
@@ -52,6 +53,19 @@ public class LoginLogoutController {
 		boolean isValidUser = mUserLoginService.verifyUser(pUser);
 
 		if (isValidUser) {
+			loginSuccess = "Success";
+		}
+		return loginSuccess;
+	}
+	
+	@PostMapping(path = "/changePassowrd")
+	public String changePassword(@RequestBody ChangePassword pChangePassword) {
+
+		String loginSuccess = "Failure";
+
+		boolean isChanged = mUserLoginService.changePassword(pChangePassword);
+
+		if (isChanged) {
 			loginSuccess = "Success";
 		}
 		return loginSuccess;

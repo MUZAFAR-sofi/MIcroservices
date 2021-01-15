@@ -3,6 +3,7 @@ package com.authenticationservice.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.authenticationservice.domain.ChangePassword;
 import com.authenticationservice.domain.User;
 import com.authenticationservice.repository.UserRepository;
 
@@ -30,6 +31,11 @@ public class UserService {
 	public boolean getCreditHistory(String userId) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	public boolean changePassword(ChangePassword pChangePassword) {
+		// TODO Auto-generated method stub
+		return true;
 	}
 
 }
