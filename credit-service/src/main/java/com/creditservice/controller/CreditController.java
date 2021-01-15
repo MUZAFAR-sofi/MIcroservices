@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.creditservice.domain.CreditHistory;
+import com.creditservice.domain.RecommendedPack;
 import com.creditservice.service.CreditService;
 
 @RestController
@@ -32,6 +33,14 @@ public class CreditController {
 
 		List<CreditHistory> myCreditList = mCreditService.getCreditHistory(userId);
 		return myCreditList;
+
+	}
+	
+	@GetMapping(path = "/getRecommendedPacks", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<RecommendedPack> getRecommendedPacks() {
+
+		List<RecommendedPack> myRecommendedPack = mCreditService.getRecommendedPacks();
+		return myRecommendedPack;
 
 	}
 }
