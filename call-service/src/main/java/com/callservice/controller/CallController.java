@@ -14,7 +14,7 @@ import com.callservice.service.CallService;
 
 
 @RestController
-@RequestMapping("/api/call")
+@RequestMapping("/call-api")
 public class CallController {
 
 	@Autowired
@@ -24,7 +24,7 @@ public class CallController {
 	@GetMapping(path = "/")
 	public String welcome() {
 
-		return "Welcome";
+		return "Call Welcome";
 	}
 	
 	

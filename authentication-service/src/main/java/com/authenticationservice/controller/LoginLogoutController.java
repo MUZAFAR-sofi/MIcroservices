@@ -19,7 +19,7 @@ import com.authenticationservice.service.UserService;
  */
 @RestController
 @RequestMapping("/api/login")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin
 public class LoginLogoutController {
 
 	@Autowired

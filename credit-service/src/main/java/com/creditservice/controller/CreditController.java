@@ -14,7 +14,7 @@ import com.creditservice.domain.RecommendedPack;
 import com.creditservice.service.CreditService;
 
 @RestController
-@RequestMapping("/api/credit")
+@RequestMapping("/credit-api")
 public class CreditController {
 
 	@Autowired
